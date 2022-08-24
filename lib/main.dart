@@ -1,4 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_full_learn/101/app_bar_learn.dart';
+import 'package:flutter_full_learn/101/color_learn.dart';
+import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
+import 'package:flutter_full_learn/101/icon_learn.dart';
+import 'package:flutter_full_learn/101/text_learn_view.dart';
+
+import '101/button_learn.dart';
+import '101/scaffold_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,54 +22,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData.dark(),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: TextButton(
-        onPressed: _incrementCounter,
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+          errorColor: ColorsItems.gurkan,
+          appBarTheme: AppBarTheme(
+            centerTitle: true,
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            backgroundColor: Colors.transparent,
+            // önde kalmasını sağlamak için elevation veriliyor.
+            elevation: 0,
+          )),
+      home: ColorLearn(),
     );
   }
 }
