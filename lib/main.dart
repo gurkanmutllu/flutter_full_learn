@@ -18,8 +18,12 @@ import 'package:flutter_full_learn/demos/note_demos_view.dart';
 
 import '101/button_learn.dart';
 import '101/custom_widget_learn.dart';
+import '101/page_view_learn.dart';
 import '101/scaffold_learn.dart';
 import '101/stack_learn.dart';
+import '101/statefull_learn.dart';
+import '101/statefull_life_cycle_learn.dart';
+import '101/text_field_learn.dart';
 import 'demos/stack_demo_view.dart';
 
 void main() {
@@ -35,22 +39,33 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-          progressIndicatorTheme: ProgressIndicatorThemeData(
-            color: Colors.white,
-          ),
-          cardTheme: CardTheme(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          ),
-          errorColor: ColorsItems.gurkan,
-          appBarTheme: AppBarTheme(
-            centerTitle: true,
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            backgroundColor: Colors.transparent,
-            // önde kalmasını sağlamak için elevation veriliyor.
-            elevation: 0,
-          )),
-      home: StackDemoView(),
+        progressIndicatorTheme: ProgressIndicatorThemeData(
+          color: Colors.white,
+        ),
+        cardTheme: CardTheme(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        ),
+        errorColor: ColorsItems.gurkan,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+          backgroundColor: Colors.transparent,
+          // önde kalmasını sağlamak için elevation veriliyor.
+          elevation: 0,
+        ),
+        textSelectionTheme: TextSelectionThemeData(
+          selectionColor: Colors.red,
+          cursorColor: Colors.blue,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          iconColor: Colors.blue,
+          border: OutlineInputBorder(),
+          floatingLabelStyle: TextStyle(color: Colors.blue, fontSize: 24, fontWeight: FontWeight.w600),
+        ),
+      ),
+      home: TextFieldLearn(),
     );
   }
 }
