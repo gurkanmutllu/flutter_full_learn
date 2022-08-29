@@ -18,12 +18,18 @@ import 'package:flutter_full_learn/demos/note_demos_view.dart';
 
 import '101/button_learn.dart';
 import '101/custom_widget_learn.dart';
+import '101/list_view_builder.dart';
+import '101/list_view_learn.dart';
+import '101/navigation_learn.dart';
 import '101/page_view_learn.dart';
 import '101/scaffold_learn.dart';
 import '101/stack_learn.dart';
 import '101/statefull_learn.dart';
 import '101/statefull_life_cycle_learn.dart';
 import '101/text_field_learn.dart';
+import 'demos/color_demos_view.dart';
+import 'demos/color_life_cycle_view.dart';
+import 'demos/my_collections_demos.dart';
 import 'demos/stack_demo_view.dart';
 
 void main() {
@@ -65,7 +71,7 @@ class MyApp extends StatelessWidget {
           floatingLabelStyle: TextStyle(color: Colors.blue, fontSize: 24, fontWeight: FontWeight.w600),
         ),
       ),
-      home: TextFieldLearn(),
+      home: NavigationLearn(),
     );
   }
 }
