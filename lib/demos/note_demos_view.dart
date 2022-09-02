@@ -13,8 +13,8 @@ class NoteDemos extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
-      ),
+          // systemOverlayStyle: SystemUiOverlayStyle.dark,
+          ),
       body: Padding(
         padding: PaddingItems.horizontalPadding,
         child: Column(
@@ -52,9 +52,7 @@ class NoteDemos extends StatelessWidget {
 
 // Center text widget.
 class _SubTitleWidget extends StatelessWidget {
-  const _SubTitleWidget(
-      {Key? key, this.textAlign = TextAlign.center, required this.text})
-      : super(key: key);
+  const _SubTitleWidget({Key? key, this.textAlign = TextAlign.center, required this.text}) : super(key: key);
   final TextAlign textAlign;
   final String text;
 
@@ -92,8 +90,7 @@ class _TitleWidget extends StatelessWidget {
 }
 
 class PaddingItems {
-  static const EdgeInsets horizontalPadding =
-      EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets verticalPadding = EdgeInsets.symmetric(vertical: 10);
 }
 

@@ -9,8 +9,8 @@ class CustomWidgetLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
-      ),
+          // systemOverlayStyle: SystemUiOverlayStyle.dark,
+          ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -46,18 +46,15 @@ class _PaddingUtility {
   final EdgeInsets normal2xPadding = EdgeInsets.all(16.0);
 }
 
-class CustomFoodButton extends StatelessWidget
-    with _ColorsUtility, _PaddingUtility {
-  CustomFoodButton({Key? key, required this.title, required this.onPressed})
-      : super(key: key);
+class CustomFoodButton extends StatelessWidget with _ColorsUtility, _PaddingUtility {
+  CustomFoodButton({Key? key, required this.title, required this.onPressed}) : super(key: key);
   final String title;
   final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style:
-            ElevatedButton.styleFrom(primary: redColor, shape: StadiumBorder()),
+        style: ElevatedButton.styleFrom(primary: redColor, shape: StadiumBorder()),
         onPressed: onPressed,
         child: Padding(
           padding: normal2xPadding,
