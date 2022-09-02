@@ -9,13 +9,13 @@ class ModelLearnView extends StatefulWidget {
 }
 
 class _ModelLearnViewState extends State<ModelLearnView> {
-  var user9 = PostModel8(body: 'a');
+  var user9 = PostModel8(body: 'Gurkan');
 
   @override
   void initState() {
     super.initState();
 
-    final user1 = PostModel()
+    final user1 = PostModel1()
       ..userId = 1
       ..body = 'vb';
     user1.body = 'hello';
