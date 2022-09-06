@@ -12,7 +12,7 @@ class LightTheme {
         appBarTheme: AppBarTheme(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)))),
         scaffoldBackgroundColor: Colors.white.withOpacity(0.8),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.green),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.deepPurpleAccent),
         buttonTheme: ButtonThemeData(colorScheme: ColorScheme.light(onSecondary: _lightColor.purple)),
         colorScheme: ColorScheme.light(),
         checkboxTheme: CheckboxThemeData(
