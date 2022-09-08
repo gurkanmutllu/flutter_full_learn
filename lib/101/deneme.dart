@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AppBarLearnView extends StatefulWidget {
-  AppBarLearnView({Key? key}) : super(key: key);
+class denemeLearnView extends StatefulWidget {
+  denemeLearnView({Key? key}) : super(key: key);
 
   @override
-  State<AppBarLearnView> createState() => _AppBarLearnViewState();
+  State<denemeLearnView> createState() => _denemeLearnViewState();
 }
 
-class _AppBarLearnViewState extends State<AppBarLearnView> {
+class _denemeLearnViewState extends State<denemeLearnView> {
   late String _title;
   late String _text;
   late bool _isChanged = false;

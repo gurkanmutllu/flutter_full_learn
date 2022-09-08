@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/theme/light_theme.dart';
-
-import '303/tabbar_advance.dart';
+import 'package:flutter_full_learn/303/reqres_resource/view/reqres_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: LightTheme().theme,
-      home: TabAdvanceLearn(),
+      home: ReqresView(),
     );
   }
 }
