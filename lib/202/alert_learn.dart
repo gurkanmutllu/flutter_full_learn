@@ -20,7 +20,7 @@ class _AlertLearnState extends State<AlertLearn> {
               //arkaya basılmasına engel olur tuşlara basma zorunluluğu
               //barrierDismissible: false,
               builder: (context) {
-                return _ImageZoomDialog();
+                return const _ImageZoomDialog();
               });
           inspect(response);
         },
@@ -38,18 +38,18 @@ class _UpdateDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Version update!'),
+      title: const Text('Version update!'),
       actions: [
         ElevatedButton(
             onPressed: () {
               Navigator.pop(context, true);
             },
-            child: Text('Update')),
+            child: const Text('Update')),
         TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text('Close'))
+            child: const Text('Close'))
       ],
     );
   }
@@ -63,18 +63,18 @@ class UpdateDialog extends AlertDialog {
   UpdateDialog({Key? key, required BuildContext context})
       : super(
           key: key,
-          title: Text(Keys.versionUpdate),
+          title: const Text(Keys.versionUpdate),
           actions: [
             ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context, true);
                 },
-                child: Text('Update')),
+                child: const Text('Update')),
             TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text('Close'))
+                child: const Text('Close'))
           ],
         );
 }
