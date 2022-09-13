@@ -35,6 +35,7 @@ dependencies:
 
   #Google
   url_launcher: ^6.1.5
+  image_picker: ^0.8.5+3 
   json_serializable: ^6.3.1
   json_annotation: ^4.6.0
 
@@ -52,6 +53,7 @@ dependencies:
 
   #States
   provider: ^6.0.3
+  flutter_mobx: ^2.0.6+1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -63,6 +65,7 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
   build_runner: ^2.2.0
+  mobx_codegen: ^2.0.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
