@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class denemeLearnView extends StatefulWidget {
-  denemeLearnView({Key? key}) : super(key: key);
+  const denemeLearnView({Key? key}) : super(key: key);
 
   @override
   State<denemeLearnView> createState() => _denemeLearnViewState();
@@ -40,13 +39,13 @@ class _denemeLearnViewState extends State<denemeLearnView> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        leading: Icon(Icons.chevron_left),
+        leading: const Icon(Icons.chevron_left),
         actions: [
           IconButton(
               onPressed: () {
                 _changeText();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.favorite_outlined,
                 color: Colors.deepPurpleAccent,
               )),
