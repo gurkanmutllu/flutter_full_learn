@@ -87,9 +87,9 @@ class CollectionItems {
 
 class PaddingUtility {
   final paddingTop = const EdgeInsets.only(top: 10);
-  final paddingHorizontal = EdgeInsets.symmetric(horizontal: 20);
+  final paddingHorizontal = const EdgeInsets.symmetric(horizontal: 20);
   final paddingAll = const EdgeInsets.all(20);
-  final paddingBottom = EdgeInsets.only(bottom: 20);
+  final paddingBottom = const EdgeInsets.only(bottom: 20);
 }
 
 class ProjectImages {

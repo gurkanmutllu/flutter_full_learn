@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/image_learn.dart';
 
 class NoteDemos extends StatelessWidget {
@@ -23,12 +22,15 @@ class NoteDemos extends StatelessWidget {
             _TitleWidget(title: _title),
             Padding(
               padding: PaddingItems.verticalPadding,
-              child: _SubTitleWidget(text: _description * 10),
+              child: _SubTitleWidget(
+                text: _description * 10,
+                textAlign: TextAlign.center,
+              ),
             ),
-            Spacer(),
-            _CreateButton(context),
+            const Spacer(),
+            _createButton(context),
             TextButton(onPressed: () {}, child: Text(_importNotes)),
-            SizedBox(
+            const SizedBox(
               height: ButtonHeights.normalButtonHeight,
             )
           ],
@@ -37,7 +39,7 @@ class NoteDemos extends StatelessWidget {
     );
   }
 
-  ElevatedButton _CreateButton(BuildContext context) {
+  ElevatedButton _createButton(BuildContext context) {
     return ElevatedButton(
         onPressed: () {},
         child: SizedBox(
@@ -52,7 +54,7 @@ class NoteDemos extends StatelessWidget {
 
 // Center text widget.
 class _SubTitleWidget extends StatelessWidget {
-  const _SubTitleWidget({Key? key, this.textAlign = TextAlign.center, required this.text}) : super(key: key);
+  const _SubTitleWidget({Key? key, required this.text, required this.textAlign}) : super(key: key);
   final TextAlign textAlign;
   final String text;
 

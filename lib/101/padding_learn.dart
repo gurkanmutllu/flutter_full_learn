@@ -12,26 +12,25 @@ class PaddingLearn extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Container(
                 color: Colors.white,
                 height: 100,
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               child: Container(
-                color: Color.fromARGB(255, 206, 40, 40),
+                color: const Color.fromARGB(255, 206, 40, 40),
                 height: 100,
               ),
             ),
             Padding(
-              padding: ProjectPadding.pagePaddingRightOnly +
-                  ProjectPadding.pagePaddingVertical,
-              child: Text('data'),
+              padding: ProjectPadding.pagePaddingRightOnly + ProjectPadding.pagePaddingVertical,
+              child: const Text('data'),
             ),
             Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               color: Colors.amber,
               height: 100,
               width: 10,

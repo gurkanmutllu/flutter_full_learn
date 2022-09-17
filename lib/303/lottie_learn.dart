@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/product/constant/duration_items.dart';
 import 'package:flutter_full_learn/product/constant/lottie_items.dart';

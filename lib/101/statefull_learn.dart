@@ -25,7 +25,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(LanguageItems.welcomeTitle),
+        title: const Text(LanguageItems.welcomeTitle),
       ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
@@ -44,8 +44,8 @@ class _StatefullLearnState extends State<StatefullLearn> {
             _countValue.toString(),
             style: Theme.of(context).textTheme.headline2,
           )),
-          SizedBox(height: 300, child: Placeholder()),
-          CounterHelloButton(),
+          const SizedBox(height: 300, child: Placeholder()),
+          const CounterHelloButton(),
         ],
       ),
     );
@@ -56,7 +56,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
       onPressed: () {
         _updateValue(true);
       },
-      child: Icon(Icons.add),
+      child: const Icon(Icons.add),
     );
   }
 
@@ -65,7 +65,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
       onPressed: () {
         _updateValue(false);
       },
-      child: Icon(Icons.remove),
+      child: const Icon(Icons.remove),
     );
   }
 }

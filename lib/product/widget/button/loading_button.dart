@@ -27,7 +27,7 @@ class _LoadingButtonState extends State<LoadingButton> {
         await widget.onPressed.call();
         _changeLoading();
       },
-      child: _isLoading ? CircularProgressIndicator() : Text(widget.title),
+      child: _isLoading ? const CircularProgressIndicator() : Text(widget.title),
     );
   }
 }

@@ -15,18 +15,18 @@ class ListTileLearn extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: ListTile(
                 onTap: () {},
-                title: RandomImage(),
+                title: const RandomImage(),
                 // paddingleri silmek için - sıkıştırmayı sağlar
                 // dense: true,
                 contentPadding: EdgeInsets.zero,
-                subtitle: Text('how do you use your card'),
+                subtitle: const Text('how do you use your card'),
                 leading: Container(
                     height: 100,
                     width: 30,
                     alignment: Alignment.bottomCenter,
                     // color: Colors.amber,
-                    child: Icon(Icons.money)),
-                trailing: Icon(Icons.chevron_right),
+                    child: const Icon(Icons.money)),
+                trailing: const Icon(Icons.chevron_right),
               ),
             ),
           )

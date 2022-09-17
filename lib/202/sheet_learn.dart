@@ -1,8 +1,9 @@
+// ignore_for_file: unused_field
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/101/list_view_learn.dart';
-import 'package:flutter_full_learn/202/image_learn_202.dart';
 
 class SheetLearn extends StatefulWidget {
   const SheetLearn({super.key});
@@ -21,16 +22,16 @@ class _SheetLearnState extends State<SheetLearn> with ProductSheetMixin {
       body: Center(
         child: TextButton(
             onPressed: () {
-              showCustomSheet(context, ListViewLearn());
+              showCustomSheet(context, const ListViewLearn());
             },
-            child: Text('Show')),
+            child: const Text('Show')),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final result = await showModalBottomSheet(
               context: context,
               isScrollControlled: true,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
               builder: (context) {
                 return _CustomSheet(backgroundColor: _backgroundColor);
               });
@@ -41,7 +42,7 @@ class _SheetLearnState extends State<SheetLearn> with ProductSheetMixin {
             });
           }
         },
-        child: Icon(Icons.share),
+        child: const Icon(Icons.share),
       ),
     );
   }
@@ -64,7 +65,7 @@ class _CustomSheetState extends State<_CustomSheet> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -93,7 +94,7 @@ class _CustomSheetState extends State<_CustomSheet> {
                 ),
               ]),
             ),
-            Text('data22'),
+            const Text('data22'),
             Image.network(
               'https://picsum.photos/200',
               height: 200,
@@ -105,7 +106,7 @@ class _CustomSheetState extends State<_CustomSheet> {
                   });
                   Navigator.of(context).pop<bool>(true);
                 },
-                child: Text('OK'))
+                child: const Text('OK'))
           ],
         ),
       ),
@@ -117,7 +118,7 @@ mixin ProductSheetMixin {
   Future<T?> showCustomSheet<T>(BuildContext context, Widget child) async {
     return showModalBottomSheet<T>(
         context: context,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
         builder: (context) {
           return _CustomMainSheet(child: child);
         });
@@ -125,17 +126,17 @@ mixin ProductSheetMixin {
 }
 
 class _CustomMainSheet extends StatelessWidget {
-  const _CustomMainSheet({super.key, required this.child});
+  const _CustomMainSheet({required this.child});
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [_BaseSheetHeader(), Expanded(child: child)],
+          children: [const _BaseSheetHeader(), Expanded(child: child)],
         ),
       ),
     );

@@ -20,7 +20,7 @@ class _OOPLearnViewState extends State<OOPLearnView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
+        actions: const [
           CircularProgressIndicator(
             color: Colors.amber,
           )

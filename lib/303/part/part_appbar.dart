@@ -8,12 +8,11 @@ class _PartOfAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text('a'),
-      actions: [IconButton(onPressed: () {}, icon: Icon(Icons.abc_rounded))],
+      title: const Text('a'),
+      actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.abc_rounded))],
     );
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

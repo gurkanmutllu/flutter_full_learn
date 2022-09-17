@@ -1,3 +1,5 @@
+// ignore_for_file: hash_and_equals
+
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/product/widget/button/answer_button.dart';
 import 'package:flutter_full_learn/product/widget/button/loading_button.dart';
@@ -17,9 +19,7 @@ class _CallBackLearnState extends State<CallBackLearn> {
       appBar: AppBar(),
       body: Column(
         children: [
-          CallBackDropdown(onUserSelected: (CallbackUser user) {
-            print(user.name);
-          }),
+          CallBackDropdown(onUserSelected: (CallbackUser user) {}),
           AnswerButton(
             onNumber: (number) {
               return number % 3 == 1;
@@ -28,7 +28,7 @@ class _CallBackLearnState extends State<CallBackLearn> {
           LoadingButton(
               title: 'Save',
               onPressed: () async {
-                await Future.delayed(Duration(seconds: 1));
+                await Future.delayed(const Duration(seconds: 1));
               })
         ],
       ),

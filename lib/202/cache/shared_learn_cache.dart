@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/cache/shared_manager.dart';
 import 'package:flutter_full_learn/202/cache/user_cache/user_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedLearn extends StatefulWidget {
   const SharedLearn({super.key});
@@ -78,24 +77,23 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
               color: Theme.of(context).scaffoldBackgroundColor,
             ),
           )
-        : SizedBox.shrink();
+        : const SizedBox.shrink();
   }
 
   _saveValueButton() {
     return FloatingActionButton(
-      child: Icon(Icons.save),
+      child: const Icon(Icons.save),
       onPressed: () async {
         changeLoading();
         await _manager.saveString(SharedKeys.counter, _currentValue.toString());
         changeLoading();
-        print('sss');
       },
     );
   }
 
   _removeValueButton() {
     return FloatingActionButton(
-      child: Icon(Icons.remove_circle_outline),
+      child: const Icon(Icons.remove_circle_outline),
       onPressed: () async {
         changeLoading();
         await _manager.removeItem(SharedKeys.counter);
@@ -105,6 +103,7 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
   }
 }
 
+// ignore: unused_element
 class _UserListView extends StatelessWidget {
   _UserListView({
     Key? key,

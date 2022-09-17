@@ -6,11 +6,9 @@ class HighCard extends StatelessWidget {
   final List<String> items;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        items.join(','),
-        style: Theme.of(context).textTheme.headline2,
-      ),
+    return Text(
+      items.join(','),
+      style: Theme.of(context).textTheme.headline2,
     );
   }
 }

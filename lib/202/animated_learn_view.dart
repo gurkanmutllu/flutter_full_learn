@@ -47,37 +47,37 @@ class _AnimatedLearnViewState extends State<AnimatedLearnView> with TickerProvid
       body: Column(
         children: [
           ListTile(
-            title:
-                AnimatedOpacity(duration: _DurationItems.durationLow, opacity: _isOpacity ? 1 : 0, child: Text('data')),
+            title: AnimatedOpacity(
+                duration: _DurationItems.durationLow, opacity: _isOpacity ? 1 : 0, child: const Text('data')),
             trailing: IconButton(
                 onPressed: () {
                   _changeOpacity();
                 },
-                icon: Icon(Icons.precision_manufacturing_rounded)),
+                icon: const Icon(Icons.precision_manufacturing_rounded)),
           ),
           AnimatedDefaultTextStyle(
-              child: Text('data'),
-              style: (_isVisible ? context.textTheme().headline1 : context.textTheme().subtitle1) ?? TextStyle(),
-              duration: _DurationItems.durationLow),
+              style: (_isVisible ? context.textTheme().headline1 : context.textTheme().subtitle1) ?? const TextStyle(),
+              duration: _DurationItems.durationLow,
+              child: const Text('data')),
           AnimatedIcon(icon: AnimatedIcons.menu_close, progress: controller),
           AnimatedContainer(
             duration: _DurationItems.durationLow,
             height: _isVisible ? kZero : MediaQuery.of(context).size.width * 0.2,
             width: MediaQuery.of(context).size.height * 0.2,
             color: Colors.blue,
-            margin: EdgeInsets.all(5),
+            margin: const EdgeInsets.all(5),
           ),
           Expanded(
               child: Stack(
-            children: [
+            children: const [
               AnimatedPositioned(
-                  top: 10, curve: Curves.elasticOut, child: Text('Stack Data'), duration: _DurationItems.durationLow)
+                  top: 10, curve: Curves.elasticOut, duration: _DurationItems.durationLow, child: Text('Stack Data'))
             ],
           )),
           Expanded(
             child: AnimatedList(
               itemBuilder: (context, index, animation) {
-                return Text('data');
+                return const Text('data');
               },
             ),
           )
@@ -88,8 +88,8 @@ class _AnimatedLearnViewState extends State<AnimatedLearnView> with TickerProvid
 
   AnimatedCrossFade _placeHolderwidget() {
     return AnimatedCrossFade(
-      firstChild: Placeholder(),
-      secondChild: SizedBox.shrink(),
+      firstChild: const Placeholder(),
+      secondChild: const SizedBox.shrink(),
       crossFadeState: _isVisible ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       duration: _DurationItems.durationLow,
     );

@@ -49,8 +49,8 @@ class _SharedListCacheState extends LoadingStatefull<SharedListCache> {
                       await userCacheManager.saveItems(_users);
                       changeLoading();
                     },
-                    icon: Icon(Icons.download_for_offline_outlined)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.remove_circle_outline)),
+                    icon: const Icon(Icons.download_for_offline_outlined)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.remove_circle_outline)),
               ],
       ),
       body: _UserListView(users: _users),
@@ -59,7 +59,7 @@ class _SharedListCacheState extends LoadingStatefull<SharedListCache> {
 }
 
 class _UserListView extends StatelessWidget {
-  _UserListView({
+  const _UserListView({
     Key? key,
     required this.users,
   }) : super(key: key);

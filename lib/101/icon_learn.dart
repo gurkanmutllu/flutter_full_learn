@@ -9,7 +9,7 @@ class IconLearnView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello'),
+        title: const Text('Hello'),
       ),
       body: Column(
         children: [
@@ -20,7 +20,7 @@ class IconLearnView extends StatelessWidget {
                 color: iconColor.froly,
                 size: iconSize.iconSmall,
               )),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           IconButton(
@@ -30,7 +30,7 @@ class IconLearnView extends StatelessWidget {
                 color: Colors.blue,
                 size: iconSize.iconMedium,
               )),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           IconButton(
@@ -40,7 +40,7 @@ class IconLearnView extends StatelessWidget {
                 color: Theme.of(context).colorScheme.error,
                 size: iconSize.iconLarge,
               )),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           IconButton(
@@ -63,5 +63,5 @@ class IconSizes {
 }
 
 class IconColors {
-  final Color froly = Color(0xffED617A);
+  final Color froly = const Color(0xffED617A);
 }

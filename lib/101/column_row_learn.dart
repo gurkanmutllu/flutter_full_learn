@@ -7,7 +7,7 @@ class ColumnRowLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('data'),
+        title: const Text('data'),
       ),
       body: Column(
         children: [
@@ -22,14 +22,14 @@ class ColumnRowLearn extends StatelessWidget {
                   Expanded(flex: 1, child: Container(color: Colors.purple)),
                 ],
               )),
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Expanded(
               flex: 2,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 // mainAxisSize: MainAxisSize.min,
-                children: [
+                children: const [
                   Text('data1'),
                   Text('data2'),
                   Text('data3'),
@@ -38,7 +38,7 @@ class ColumnRowLearn extends StatelessWidget {
           SizedBox(
             height: ProjectContainerSize.cardHeight,
             child: Column(
-              children: [
+              children: const [
                 Expanded(child: Text('gurkan')),
                 Expanded(child: Text('gurkan')),
                 Expanded(child: Text('gurkan')),

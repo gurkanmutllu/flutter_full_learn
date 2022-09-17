@@ -24,6 +24,6 @@ class _AnswerButtonState extends State<AnswerButton> {
             _backgroundColor = response ? Colors.green : Colors.red;
           });
         },
-        child: Text('data'));
+        child: const Text('data'));
   }
 }

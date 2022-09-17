@@ -28,11 +28,11 @@ class _CallBackDropdownState extends State<CallBackDropdown> {
         value: _user,
         items: CallbackUser.dummyUsers().map((e) {
           return DropdownMenuItem(
+            value: e,
             child: Text(
               e.name,
               style: Theme.of(context).textTheme.headline3,
             ),
-            value: e,
           );
         }).toList(),
         onChanged: _updateUser);

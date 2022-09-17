@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class CustomWidgetLearn extends StatelessWidget {
-  CustomWidgetLearn({Key? key}) : super(key: key);
+  const CustomWidgetLearn({Key? key}) : super(key: key);
   final String title = 'Food';
 
   @override
@@ -25,7 +24,7 @@ class CustomWidgetLearn extends StatelessWidget {
                   )),
             ),
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           CustomFoodButton(
             title: title,
             onPressed: () {},
@@ -42,8 +41,8 @@ class _ColorsUtility {
 }
 
 class _PaddingUtility {
-  final EdgeInsets normalPadding = EdgeInsets.all(8.0);
-  final EdgeInsets normal2xPadding = EdgeInsets.all(16.0);
+  final EdgeInsets normalPadding = const EdgeInsets.all(8.0);
+  final EdgeInsets normal2xPadding = const EdgeInsets.all(16.0);
 }
 
 class CustomFoodButton extends StatelessWidget with _ColorsUtility, _PaddingUtility {
@@ -54,7 +53,7 @@ class CustomFoodButton extends StatelessWidget with _ColorsUtility, _PaddingUtil
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: redColor, shape: StadiumBorder()),
+        style: ElevatedButton.styleFrom(backgroundColor: redColor, shape: const StadiumBorder()),
         onPressed: onPressed,
         child: Padding(
           padding: normal2xPadding,

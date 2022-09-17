@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class denemeLearnView extends StatefulWidget {
-  const denemeLearnView({Key? key}) : super(key: key);
+class DenemeLearnView extends StatefulWidget {
+  const DenemeLearnView({Key? key}) : super(key: key);
 
   @override
-  State<denemeLearnView> createState() => _denemeLearnViewState();
+  State<DenemeLearnView> createState() => _DenemeLearnViewState();
 }
 
-class _denemeLearnViewState extends State<denemeLearnView> {
+class _DenemeLearnViewState extends State<DenemeLearnView> {
   late String _title;
   late String _text;
   late bool _isChanged = false;
