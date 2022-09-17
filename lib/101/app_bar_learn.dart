@@ -10,16 +10,16 @@ class AppBarLearnView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        leading: Icon(Icons.chevron_left),
+        leading: const Icon(Icons.chevron_left),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.alarm_off)),
-          Center(
+          IconButton(onPressed: () {}, icon: const Icon(Icons.ac_unit_rounded)),
+          const Center(
             child: CircularProgressIndicator(),
           )
         ],
       ),
       body: Column(
-        children: [],
+        children: const [],
       ),
     );
   }
