@@ -33,20 +33,20 @@ class _PageViewLearnState extends State<PageViewLearn> {
             padding: const EdgeInsets.only(left: 20),
             child: Text(_currentPageIndex.toString()),
           ),
-          Spacer(),
+          const Spacer(),
           FloatingActionButton(
             backgroundColor: Colors.red,
             onPressed: () {
               _pageController.previousPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
             },
-            child: Icon(Icons.chevron_left),
+            child: const Icon(Icons.chevron_left),
           ),
           FloatingActionButton(
             backgroundColor: Colors.red,
             onPressed: () {
               _pageController.nextPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
             },
-            child: Icon(Icons.chevron_right),
+            child: const Icon(Icons.chevron_right),
           ),
         ],
       ),
@@ -56,12 +56,12 @@ class _PageViewLearnState extends State<PageViewLearn> {
         controller: _pageController,
         onPageChanged: _updatePageIndex,
         children: [
-          ImageLearn(),
+          const ImageLearn(),
           IconLearnView(),
-          StackLearn(),
-          CardLearn(),
-          ColumnRowLearn(),
-          StatefullLearn(),
+          const StackLearn(),
+          const CardLearn(),
+          const ColumnRowLearn(),
+          const StatefullLearn(),
           TextLearnView(),
         ],
       ),
@@ -70,5 +70,5 @@ class _PageViewLearnState extends State<PageViewLearn> {
 }
 
 class _DurationUtility {
-  static const _durationLow = const Duration(seconds: 1);
+  static const _durationLow = Duration(seconds: 1);
 }

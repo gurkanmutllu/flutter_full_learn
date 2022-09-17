@@ -26,7 +26,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
             color: Colors.red,
             height: 300,
           ),
-          Divider(),
+          const Divider(),
           SizedBox(
             height: 300,
             child: ListView(
@@ -56,11 +56,11 @@ class _ListViewLearnState extends State<ListViewLearn> {
                   color: Colors.white,
                   width: 100,
                 ),
-                Divider(),
+                const Divider(),
               ],
             ),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
           // ssss
           FittedBox(
             child: Text(
@@ -73,7 +73,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
             color: Colors.red,
             height: 300,
           ),
-          Divider(),
+          const Divider(),
           SizedBox(
             height: 300,
             child: ListView(
@@ -103,12 +103,12 @@ class _ListViewLearnState extends State<ListViewLearn> {
                   color: Colors.white,
                   width: 100,
                 ),
-                Divider(),
+                const Divider(),
               ],
             ),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.close)),
-          _ListDemo(),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
+          const _ListDemo(),
         ],
       ),
     );
@@ -126,16 +126,15 @@ class __ListDemoState extends State<_ListDemo> {
   @override
   void initState() {
     super.initState();
-    print('Hello');
   }
 
   @override
   void dispose() {
     super.dispose();
-    print('exit');
   }
 
+  @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return const Placeholder();
   }
 }

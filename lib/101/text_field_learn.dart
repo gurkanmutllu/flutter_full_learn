@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
@@ -28,7 +27,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
               return _animatedContainer(currentLength);
             },
             keyboardType: TextInputType.emailAddress,
-            autofillHints: [AutofillHints.email],
+            autofillHints: const [AutofillHints.email],
             focusNode: focusNodeTextFieldOne,
             inputFormatters: [TextProjectInputFormatter()._formatter],
             textInputAction: TextInputAction.next,
@@ -48,7 +47,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
   AnimatedContainer _animatedContainer(int? currentLength) {
     return AnimatedContainer(
       key: key,
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 1),
       height: 10,
       width: 10.0 * (currentLength ?? 0),
       color: Colors.green,
@@ -67,7 +66,7 @@ class TextProjectInputFormatter {
 }
 
 class _InputDecorator {
-  final emailInput = InputDecoration(
+  final emailInput = const InputDecoration(
     prefixIcon: Icon(Icons.mail),
     border: OutlineInputBorder(),
     labelText: LanguageItems.mailTitle,

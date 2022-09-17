@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:meta/meta_meta.dart';
 
 class StatefullLifeCycleLearn extends StatefulWidget {
   const StatefullLifeCycleLearn({Key? key, required this.message}) : super(key: key);
@@ -18,7 +15,6 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _computeName();
-    print('c');
   }
 
   @override
@@ -28,21 +24,19 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
       _message = widget.message;
       _computeName();
       setState(() {});
-      print('b');
     }
   }
 
   @override
   void dispose() {
     super.dispose();
-    print('alo');
   }
 
+  @override
   void initState() {
     super.initState();
     _message = widget.message;
     _isOdd = widget.message.length.isOdd;
-    print('a');
   }
 
   void _computeName() {

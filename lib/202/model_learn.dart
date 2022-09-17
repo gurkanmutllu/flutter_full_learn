@@ -35,8 +35,11 @@ class PostModel4 {
 // tavsiye edilenlerden
 class PostModel5 {
   final int _userId;
+  // ignore: unused_field
   final int _id;
+  // ignore: unused_field
   final String _title;
+  // ignore: unused_field
   final String _body;
 
   int get userId => _userId;
@@ -49,9 +52,13 @@ class PostModel5 {
 }
 
 class PostModel6 {
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
 
   PostModel6({required int userId, required int id, required String title, required String body})
@@ -62,9 +69,13 @@ class PostModel6 {
 }
 
 class PostModel7 {
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
 
   PostModel7({int userId = 0, int id = 0, String title = '', String body = ''})

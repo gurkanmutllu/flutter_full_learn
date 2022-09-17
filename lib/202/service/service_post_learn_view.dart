@@ -1,4 +1,4 @@
-import 'dart:io';
+// ignore_for_file: unused_element
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +14,7 @@ class ServicePostLearn extends StatefulWidget {
 class _ServicePostLearnState extends State<ServicePostLearn> {
   String? name;
   bool _isLoading = false;
+  // ignore: unused_field
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
@@ -38,26 +39,26 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
     return Scaffold(
       appBar: AppBar(
         title: Text(name ?? ''),
-        actions: [_isLoading ? Center(child: CircularProgressIndicator.adaptive()) : SizedBox.shrink()],
+        actions: [_isLoading ? const Center(child: CircularProgressIndicator.adaptive()) : const SizedBox.shrink()],
       ),
       body: Column(
         children: [
           TextField(
             controller: _titleController,
-            decoration: InputDecoration(labelText: 'Title'),
+            decoration: const InputDecoration(labelText: 'Title'),
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.next,
           ),
           TextField(
             controller: _bodyController,
-            decoration: InputDecoration(labelText: 'Body'),
+            decoration: const InputDecoration(labelText: 'Body'),
           ),
           TextField(
             controller: _userIdController,
             keyboardType: TextInputType.number,
-            inputFormatters: [],
-            autofillHints: [AutofillHints.creditCardNumber],
-            decoration: InputDecoration(labelText: 'UserId'),
+            inputFormatters: const [],
+            autofillHints: const [AutofillHints.creditCardNumber],
+            decoration: const InputDecoration(labelText: 'UserId'),
           ),
           TextButton(
               onPressed: _isLoading
@@ -66,6 +67,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
                       if (_titleController.text.isNotEmpty &&
                           _bodyController.text.isNotEmpty &&
                           _userIdController.text.isNotEmpty) {
+                        // ignore: unused_local_variable
                         final model = PostModel(
                             body: _bodyController.text,
                             title: _titleController.text,
@@ -73,7 +75,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
                         // addItemToService(model);
                       }
                     },
-              child: Text('Send')),
+              child: const Text('Send')),
         ],
       ),
     );
@@ -92,7 +94,7 @@ class _PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
         title: Text(_model?.title ?? ''),
         subtitle: Text(_model?.body ?? ''),

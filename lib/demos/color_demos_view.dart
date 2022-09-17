@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 
 class ColorDemos extends StatefulWidget {
@@ -34,7 +36,7 @@ class _ColorDemosState extends State<ColorDemos> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: _backgroundColor,
-        bottomNavigationBar: BottomNavigationBar(onTap: _colorOnTap, items: [
+        bottomNavigationBar: BottomNavigationBar(onTap: _colorOnTap, items: const [
           BottomNavigationBarItem(icon: _ColorContainer(color: Colors.red), label: 'Red'),
           BottomNavigationBarItem(icon: _ColorContainer(color: Colors.green), label: 'Green'),
           BottomNavigationBarItem(icon: _ColorContainer(color: Colors.blue), label: 'Blue'),

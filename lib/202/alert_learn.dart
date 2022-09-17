@@ -30,6 +30,7 @@ class _AlertLearnState extends State<AlertLearn> {
   }
 }
 
+// ignore: unused_element
 class _UpdateDialog extends StatelessWidget {
   const _UpdateDialog({
     Key? key,

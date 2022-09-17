@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, unrelated_type_equality_checks
+
 import 'package:collection/collection.dart';
 import 'package:flutter_full_learn/303/generic_learn.dart';
 import 'package:flutter_full_learn/product/widget/card/high_card.dart';
@@ -22,12 +24,9 @@ void main() {
           return const GenericUser('name', 'id', 0);
         },
       );
-      print(response.name);
     } catch (e) {
-      print(e);
+      return null;
     }
-
-    print('${users.where((element) => element.money > 500)}');
 
     users.addAll([const GenericUser('name', 'id', 5)]);
     users.lastWhere((element) => element.id == 5);
@@ -61,7 +60,5 @@ void main() {
     users.forEachIndexed(
       (index, element) {},
     );
-
-    print(response);
   });
 }

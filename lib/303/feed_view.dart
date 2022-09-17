@@ -36,7 +36,6 @@ class _FeedViewState extends State<FeedView> with AutomaticKeepAliveClientMixin 
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }
 
@@ -56,11 +55,11 @@ class _FeedFeatureBuilder extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<List<PostModel>?> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.none:
-            return Placeholder();
+            return const Placeholder();
           case ConnectionState.waiting:
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           case ConnectionState.active:
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           case ConnectionState.done:
             if (snapshot.hasData) {
               return ListView.builder(
@@ -74,7 +73,7 @@ class _FeedFeatureBuilder extends StatelessWidget {
                 },
               );
             } else {
-              return Placeholder();
+              return const Placeholder();
             }
         }
       },

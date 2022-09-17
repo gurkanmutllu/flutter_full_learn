@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/101/icon_learn.dart';
-import 'package:flutter_full_learn/101/image_learn.dart';
 import 'package:flutter_full_learn/101/stack_learn.dart';
 
 class TabLearn extends StatefulWidget {
@@ -34,16 +33,16 @@ class _TabLearnState extends State<TabLearn> with TickerProviderStateMixin {
           extendBody: true,
           bottomNavigationBar: BottomAppBar(
             notchMargin: _notchedValue,
-            child: _myTabView(tabController: _tabController),
+            child: _MyTabView(tabController: _tabController),
           ),
           appBar: AppBar(),
-          body: _tabbarView(tabController: _tabController),
+          body: _TabbarView(tabController: _tabController),
         ));
   }
 }
 
-class _myTabView extends StatelessWidget {
-  const _myTabView({
+class _MyTabView extends StatelessWidget {
+  const _MyTabView({
     Key? key,
     required TabController tabController,
   })  : _tabController = tabController,
@@ -59,15 +58,15 @@ class _myTabView extends StatelessWidget {
       onTap: (int index) {},
       tabs: _MyTabViews.values
           .map((e) => Tab(
-                text: '${e.name}',
+                text: e.name,
               ))
           .toList(),
     );
   }
 }
 
-class _tabbarView extends StatelessWidget {
-  const _tabbarView({
+class _TabbarView extends StatelessWidget {
+  const _TabbarView({
     Key? key,
     required TabController tabController,
   })  : _tabController = tabController,
@@ -78,9 +77,9 @@ class _tabbarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [StackLearn(), IconLearnView(), StackLearn(), IconLearnView()]);
+        children: [const StackLearn(), IconLearnView(), const StackLearn(), IconLearnView()]);
   }
 }
 

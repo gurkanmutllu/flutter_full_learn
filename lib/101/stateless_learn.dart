@@ -9,23 +9,24 @@ class StatelessLearn extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          TitleTextWidget(text: "gurkan1"),
+          const TitleTextWidget(text: "gurkan1"),
           _emptyBox(),
-          TitleTextWidget(text: "gurkan2"),
+          const TitleTextWidget(text: "gurkan2"),
           _emptyBox(),
-          TitleTextWidget(text: "gurkan3"),
-          TitleTextWidget(text: "gurkan4"),
+          const TitleTextWidget(text: "gurkan3"),
           _emptyBox(),
-          TitleTextWidget(text: "gurkan5"),
+          const TitleTextWidget(text: "gurkan4"),
           _emptyBox(),
-          _CustomContainer(),
+          const TitleTextWidget(text: "gurkan5"),
+          _emptyBox(),
+          const _CustomContainer(),
         ],
       ),
     );
   }
 
   SizedBox _emptyBox() {
-    return SizedBox(
+    return const SizedBox(
       height: 10,
     );
   }
@@ -39,8 +40,7 @@ class _CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.red),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.red),
     );
   }
 }

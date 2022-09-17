@@ -18,13 +18,13 @@ class StackDemoView extends StatelessWidget {
                 alignment: Alignment.center,
                 children: [
                   Positioned.fill(
-                    child: RandomImage(),
                     bottom: _cardHeight / 2,
+                    child: const RandomImage(),
                   ),
                   Positioned(height: _cardHeight, bottom: 0, width: _cardWidth, child: _cardCustom())
                 ],
               )),
-          Spacer(
+          const Spacer(
             flex: 6,
           ),
         ],
@@ -33,7 +33,7 @@ class StackDemoView extends StatelessWidget {
   }
 
   Card _cardCustom() {
-    return Card(
+    return const Card(
       color: Colors.amber,
       shape: RoundedRectangleBorder(),
     );

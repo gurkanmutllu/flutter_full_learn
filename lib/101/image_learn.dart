@@ -16,8 +16,7 @@ class ImageLearn extends StatelessWidget {
           ),
           Image.network(
             'https://e7.pngegg.com/pngimages/852/776/png-clipart-book-euclidean-books-and-apple-reading-green-apple.png',
-            errorBuilder: (context, error, stackTrace) =>
-                Icon(Icons.abc_outlined),
+            errorBuilder: (context, error, stackTrace) => const Icon(Icons.abc_outlined),
           ),
         ],
       ),

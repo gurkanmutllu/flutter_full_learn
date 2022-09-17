@@ -12,17 +12,16 @@ class CardLearn extends StatelessWidget {
           Card(
             margin: ProjectMargins.cardMargin,
             color: Colors.deepPurple,
-            child: SizedBox(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            child: const SizedBox(
               height: 100,
               width: 500,
               child: Center(
                 child: Text('data'),
               ),
             ),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
-          _CustomCard(
+          const _CustomCard(
             child: SizedBox(
               height: 100,
               width: 500,
@@ -39,12 +38,11 @@ class CardLearn extends StatelessWidget {
 
 class ProjectMargins {
   static const cardMargin = EdgeInsets.all(10);
-  static final roundedRectangleBorder =
-      RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
+  static final roundedRectangleBorder = RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
 }
 
 class _CustomCard extends StatelessWidget {
-  const _CustomCard({super.key, required this.child});
+  const _CustomCard({required this.child});
   final Widget child;
 
   @override

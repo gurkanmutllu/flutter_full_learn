@@ -13,34 +13,27 @@ class FileDownload extends IFileDownload with ShareMixin {
   @override
   bool? downlaodItem(FileItem? fileItem) {
     if (fileItem == null) throw FileDownloadException();
-    print('a');
     return true;
   }
 
   void smsShare() {}
 
   @override
-  void share(params) {
-    // TODO: implement share
-  }
+  void share(params) {}
 }
 
 class SMSDownload implements IFileDownload {
   @override
   bool? downlaodItem(FileItem? fileItem) {
-    // TODO: implement downlaodItem
     throw UnimplementedError();
   }
 
   @override
-  void share(params) {
-    // TODO: implement share
-  }
+  // ignore: override_on_non_overriding_member
+  void share(params) {}
 
   @override
-  void toShare(String path) {
-    // TODO: implement toShare
-  }
+  void toShare(String path) {}
 }
 
 class FileItem {

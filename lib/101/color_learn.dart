@@ -9,7 +9,7 @@ class ColorLearn extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         color: Theme.of(context).errorColor,
-        child: Text('data'),
+        child: const Text('data'),
       ),
     );
   }

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/service/post_model.dart';
@@ -16,6 +14,7 @@ class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   String? name;
   bool _isLoading = false;
+  // ignore: unused_field
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
@@ -47,12 +46,12 @@ class _ServiceLearnState extends State<ServiceLearn> {
     return Scaffold(
         appBar: AppBar(
           title: Text(name ?? ''),
-          actions: [_isLoading ? Center(child: CircularProgressIndicator.adaptive()) : SizedBox.shrink()],
+          actions: [_isLoading ? const Center(child: CircularProgressIndicator.adaptive()) : const SizedBox.shrink()],
         ),
         body: _items == null
-            ? Placeholder()
+            ? const Placeholder()
             : ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 itemCount: _items?.length ?? 0,
                 itemBuilder: (context, index) {
                   return _PostCard(
@@ -75,7 +74,7 @@ class _PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
         title: Text(_model?.title ?? ''),
         subtitle: Text(_model?.body ?? ''),

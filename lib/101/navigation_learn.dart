@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/image_learn.dart';
 import 'package:flutter_full_learn/101/navigate_detail_learn.dart';
-import 'package:flutter_full_learn/101/stack_learn.dart';
 
 class NavigationLearn extends StatefulWidget {
   const NavigationLearn({Key? key}) : super(key: key);
@@ -43,7 +41,7 @@ class _NavigationLearnState extends State<NavigationLearn> with NavigationManage
       })),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {},
-        child: Icon(Icons.navigation),
+        child: const Icon(Icons.navigation),
       ),
     );
   }
@@ -57,7 +55,7 @@ mixin NavigationManager {
           return widget;
         },
         fullscreenDialog: true,
-        settings: RouteSettings(),
+        settings: const RouteSettings(),
       ),
     );
   }
@@ -70,7 +68,7 @@ Future<T?> navigateToWidgetNormal<T>(BuildContext context, Widget widget) {
         return widget;
       },
       // fullscreenDialog: true,
-      settings: RouteSettings(),
+      settings: const RouteSettings(),
     ),
   );
 }

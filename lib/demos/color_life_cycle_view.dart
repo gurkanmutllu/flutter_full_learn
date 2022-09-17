@@ -14,10 +14,10 @@ class _ColorLifeCycleViewState extends State<ColorLifeCycleView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: [IconButton(onPressed: _changeBackground, icon: Icon(Icons.clear))]),
+      appBar: AppBar(actions: [IconButton(onPressed: _changeBackground, icon: const Icon(Icons.clear))]),
       body: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           Expanded(
               child: ColorDemos(
             initialColor: _backgroundColor,

@@ -12,7 +12,7 @@ class PartOfLearn extends StatefulWidget {
 class _PartOfLearnState extends State<PartOfLearn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: _PartOfAppBar(),
     );
   }

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:equatable/equatable.dart';
 
 class UserManagement<T extends AdminUser> {
@@ -5,15 +7,10 @@ class UserManagement<T extends AdminUser> {
 
   UserManagement(this.admin);
 
-  void sayName(GenericUser user) {
-    print(user.name);
-  }
+  void sayName(GenericUser user) {}
 
   int calculateMoney(List<GenericUser> users) {
-    int sum = 0;
-    for (var item in users) {
-      sum += item.money;
-    }
+    for (var item in users) {}
 
     int initialValue = admin.role == 1 ? admin.money : 0;
 

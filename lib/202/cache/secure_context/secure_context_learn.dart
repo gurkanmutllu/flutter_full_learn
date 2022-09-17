@@ -13,7 +13,7 @@ enum _SecureKeys { token }
 class _SharedContextLearnState extends State<SharedContextLearn> {
   final _storage = const FlutterSecureStorage();
   String _title = '';
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   void saveItems(String data) {
     setState(() {
       _title = data;
@@ -29,9 +29,7 @@ class _SharedContextLearnState extends State<SharedContextLearn> {
   Future<void> getSecureItems() async {
     _title = await _storage.read(key: _SecureKeys.token.name) ?? '';
     if (_title.isNotEmpty) {
-      print('bu adam appi önceden kullanmış ve tokeni bu');
       _controller.text = _title;
-      print(_controller.text);
     }
     setState(() {});
   }
@@ -46,7 +44,7 @@ class _SharedContextLearnState extends State<SharedContextLearn> {
           onPressed: () async {
             await _storage.write(key: _SecureKeys.token.name, value: _title);
           },
-          child: Text('Save')),
+          child: const Text('Save')),
       body: TextField(
         controller: _controller,
         onChanged: saveItems,

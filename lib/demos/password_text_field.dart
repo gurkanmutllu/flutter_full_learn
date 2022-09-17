@@ -21,11 +21,12 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   Widget build(BuildContext context) {
     return TextField(
       controller: widget.controller,
-      autofillHints: [AutofillHints.password],
+      autofillHints: const [AutofillHints.password],
       keyboardType: TextInputType.visiblePassword,
       obscureText: _isSecure,
       obscuringCharacter: _obsureText,
-      decoration: InputDecoration(suffix: _onVisiblityIcon(), border: UnderlineInputBorder(), hintText: 'Password'),
+      decoration:
+          InputDecoration(suffix: _onVisiblityIcon(), border: const UnderlineInputBorder(), hintText: 'Password'),
     );
   }
 
