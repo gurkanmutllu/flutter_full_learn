@@ -6,10 +6,11 @@ part of 'image_upload_view_model.dart';
 // StoreGenerator
 // **************************************************************************
 
-// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
+// ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
-  final _$imageUrlAtom = Atom(name: '_ImageUploadViewModelBase.imageUrl');
+  late final _$imageUrlAtom =
+      Atom(name: '_ImageUploadViewModelBase.imageUrl', context: context);
 
   @override
   String get imageUrl {
@@ -24,7 +25,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
     });
   }
 
-  final _$fileAtom = Atom(name: '_ImageUploadViewModelBase.file');
+  late final _$fileAtom =
+      Atom(name: '_ImageUploadViewModelBase.file', context: context);
 
   @override
   File? get file {
@@ -39,7 +41,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
     });
   }
 
-  final _$isLoadingAtom = Atom(name: '_ImageUploadViewModelBase.isLoading');
+  late final _$isLoadingAtom =
+      Atom(name: '_ImageUploadViewModelBase.isLoading', context: context);
 
   @override
   bool get isLoading {
@@ -54,7 +57,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
     });
   }
 
-  final _$downloadTextAtom = Atom(name: '_ImageUploadViewModelBase.downloadText');
+  late final _$downloadTextAtom =
+      Atom(name: '_ImageUploadViewModelBase.downloadText', context: context);
 
   @override
   String get downloadText {
@@ -69,12 +73,13 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
     });
   }
 
-  final _$_ImageUploadViewModelBaseActionController = ActionController(name: '_ImageUploadViewModelBase');
+  late final _$_ImageUploadViewModelBaseActionController =
+      ActionController(name: '_ImageUploadViewModelBase', context: context);
 
   @override
   void changeLoading() {
-    final _$actionInfo =
-        _$_ImageUploadViewModelBaseActionController.startAction(name: '_ImageUploadViewModelBase.changeLoading');
+    final _$actionInfo = _$_ImageUploadViewModelBaseActionController
+        .startAction(name: '_ImageUploadViewModelBase.changeLoading');
     try {
       return super.changeLoading();
     } finally {
@@ -84,8 +89,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
 
   @override
   void updateDownloadText(int send, int total) {
-    final _$actionInfo =
-        _$_ImageUploadViewModelBaseActionController.startAction(name: '_ImageUploadViewModelBase.updateDownloadText');
+    final _$actionInfo = _$_ImageUploadViewModelBaseActionController
+        .startAction(name: '_ImageUploadViewModelBase.updateDownloadText');
     try {
       return super.updateDownloadText(send, total);
     } finally {
@@ -95,8 +100,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
 
   @override
   void uploadImageUrl(ImageUploadResponse? response) {
-    final _$actionInfo =
-        _$_ImageUploadViewModelBaseActionController.startAction(name: '_ImageUploadViewModelBase.uploadImageUrl');
+    final _$actionInfo = _$_ImageUploadViewModelBaseActionController
+        .startAction(name: '_ImageUploadViewModelBase.uploadImageUrl');
     try {
       return super.uploadImageUrl(response);
     } finally {
@@ -106,8 +111,8 @@ mixin _$ImageUploadViewModel on _ImageUploadViewModelBase, Store {
 
   @override
   void saveLocalFile(XFile? file) {
-    final _$actionInfo =
-        _$_ImageUploadViewModelBaseActionController.startAction(name: '_ImageUploadViewModelBase.saveLocalFile');
+    final _$actionInfo = _$_ImageUploadViewModelBaseActionController
+        .startAction(name: '_ImageUploadViewModelBase.saveLocalFile');
     try {
       return super.saveLocalFile(file);
     } finally {

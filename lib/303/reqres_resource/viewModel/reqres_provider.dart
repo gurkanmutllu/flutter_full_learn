@@ -25,7 +25,8 @@ class ReqresProvider extends ChangeNotifier {
     _changeLoading();
   }
 
-  void saveToLocal(ResourceContext resourceContext) {
+  bool? saveToLocal(ResourceContext resourceContext, List<Data> resources) {
     resourceContext.saveModel(ResourceModel(data: resources));
+    return resourceContext.model?.data?.isNotEmpty;
   }
 }
