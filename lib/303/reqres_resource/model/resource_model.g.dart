@@ -6,11 +6,15 @@ part of 'resource_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ResourceModel _$ResourceModelFromJson(Map<String, dynamic> json) => ResourceModel(
-      data: (json['data'] as List<dynamic>?)?.map((e) => Data.fromJson(e as Map<String, dynamic>)).toList(),
+ResourceModel _$ResourceModelFromJson(Map<String, dynamic> json) =>
+    ResourceModel(
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => Data.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
-Map<String, dynamic> _$ResourceModelToJson(ResourceModel instance) => <String, dynamic>{
+Map<String, dynamic> _$ResourceModelToJson(ResourceModel instance) =>
+    <String, dynamic>{
       'data': instance.data,
     };
 
@@ -24,7 +28,6 @@ Data _$DataFromJson(Map<String, dynamic> json) => Data(
       price: json['price'] as String?,
     );
 
-// ignore: unused_element
 Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
