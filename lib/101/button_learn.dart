@@ -20,7 +20,7 @@ class ButtonLearn extends StatelessWidget {
           ),
           child: Text(
             'Text Button',
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         const ElevatedButton(onPressed: null, child: Text('Elevated Button')),
@@ -39,7 +39,10 @@ class ButtonLearn extends StatelessWidget {
               width: 200,
               child: Text('data'),
             )),
-        OutlinedButton.icon(onPressed: () {}, icon: const Icon(Icons.adb_outlined), label: const Text('data')),
+        OutlinedButton.icon(
+            onPressed: () {},
+            icon: const Icon(Icons.adb_outlined),
+            label: const Text('data')),
         // InkWell widgeti daha kostümize edilebilir bir buton elde etmemizi sağlar.
         InkWell(onTap: () {}, child: const Text('Custom')),
         Container(
@@ -52,14 +55,16 @@ class ButtonLearn extends StatelessWidget {
         ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.black,
-              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
             ),
             onPressed: () {},
             child: Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
+              padding: const EdgeInsets.only(
+                  top: 20, bottom: 20, left: 40, right: 40),
               child: Text(
                 'Place Bid',
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             )),
       ]),

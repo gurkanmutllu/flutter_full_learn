@@ -12,7 +12,8 @@ class CardLearn extends StatelessWidget {
           Card(
             margin: ProjectMargins.cardMargin,
             color: Colors.deepPurple,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             child: const SizedBox(
               height: 100,
               width: 500,
@@ -38,7 +39,8 @@ class CardLearn extends StatelessWidget {
 
 class ProjectMargins {
   static const cardMargin = EdgeInsets.all(10);
-  static final roundedRectangleBorder = RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
+  static final roundedRectangleBorder =
+      RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
 }
 
 class _CustomCard extends StatelessWidget {
@@ -49,7 +51,7 @@ class _CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: ProjectMargins.cardMargin,
-      color: Theme.of(context).errorColor,
+      color: Theme.of(context).colorScheme.error,
       child: child,
     );
   }

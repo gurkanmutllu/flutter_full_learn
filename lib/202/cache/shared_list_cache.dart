@@ -50,7 +50,9 @@ class _SharedListCacheState extends LoadingStatefull<SharedListCache> {
                       changeLoading();
                     },
                     icon: const Icon(Icons.download_for_offline_outlined)),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.remove_circle_outline)),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.remove_circle_outline)),
               ],
       ),
       body: _UserListView(users: _users),
@@ -75,10 +77,8 @@ class _UserListView extends StatelessWidget {
             subtitle: Text(users[index].description ?? ''),
             trailing: Text(
               users[index].url ?? '',
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle1
-                  ?.copyWith(decoration: TextDecoration.underline, color: Colors.blue),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  decoration: TextDecoration.underline, color: Colors.blue),
             ),
           ),
         );
