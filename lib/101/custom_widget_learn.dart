@@ -45,21 +45,24 @@ class _PaddingUtility {
   final EdgeInsets normal2xPadding = const EdgeInsets.all(16.0);
 }
 
-class CustomFoodButton extends StatelessWidget with _ColorsUtility, _PaddingUtility {
-  CustomFoodButton({Key? key, required this.title, required this.onPressed}) : super(key: key);
+class CustomFoodButton extends StatelessWidget
+    with _ColorsUtility, _PaddingUtility {
+  CustomFoodButton({Key? key, required this.title, required this.onPressed})
+      : super(key: key);
   final String title;
   final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: redColor, shape: const StadiumBorder()),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: redColor, shape: const StadiumBorder()),
         onPressed: onPressed,
         child: Padding(
           padding: normal2xPadding,
           child: Text(
             title,
-            style: Theme.of(context).textTheme.subtitle2?.copyWith(
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
                   color: whiteColor,
                   fontWeight: FontWeight.bold,
                 ),

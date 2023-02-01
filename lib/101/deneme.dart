@@ -53,10 +53,12 @@ class _DenemeLearnViewState extends State<DenemeLearnView> {
       ),
       body: Center(
         child: DecoratedBox(
-          decoration: BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(20)),
+          decoration: BoxDecoration(
+              color: Colors.deepPurpleAccent,
+              borderRadius: BorderRadius.circular(20)),
           child: Text(
             _text,
-            style: Theme.of(context).textTheme.headline1,
+            style: Theme.of(context).textTheme.displayLarge,
           ),
         ),
       ),

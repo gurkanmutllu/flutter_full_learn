@@ -42,7 +42,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
           Center(
               child: Text(
             _countValue.toString(),
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.displayMedium,
           )),
           const SizedBox(height: 300, child: Placeholder()),
           const CounterHelloButton(),

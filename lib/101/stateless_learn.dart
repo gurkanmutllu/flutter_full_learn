@@ -40,7 +40,8 @@ class _CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.red),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20), color: Colors.red),
     );
   }
 }
@@ -52,7 +53,7 @@ class TitleTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context).textTheme.headline4,
+      style: Theme.of(context).textTheme.headlineMedium,
     );
   }
 }

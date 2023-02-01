@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/product/utility/image_upload.dart';
 import 'package:flutter_full_learn/product/utility/image_upload_manager.dart';
@@ -35,7 +37,8 @@ class _ImagePickerGenericViewState extends State<ImagePickerGenericView> {
                 _imageUploadManager.fetchFromCamera();
               },
               child: const Text('Fetch from normal')),
-          ElevatedButton(onPressed: () {}, child: const Text('Fetch from multiple')),
+          ElevatedButton(
+              onPressed: () {}, child: const Text('Fetch from multiple')),
         ],
       ),
     );

@@ -47,14 +47,15 @@ class NoteDemos extends StatelessWidget {
             child: Center(
                 child: Text(
               _createNote,
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ))));
   }
 }
 
 // Center text widget.
 class _SubTitleWidget extends StatelessWidget {
-  const _SubTitleWidget({Key? key, required this.text, required this.textAlign}) : super(key: key);
+  const _SubTitleWidget({Key? key, required this.text, required this.textAlign})
+      : super(key: key);
   final TextAlign textAlign;
   final String text;
 
@@ -63,7 +64,7 @@ class _SubTitleWidget extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
-      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+      style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.w400,
           ),
@@ -83,7 +84,7 @@ class _TitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: Theme.of(context).textTheme.headline5?.copyWith(
+      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             color: Colors.black,
             fontWeight: FontWeight.w700,
           ),
@@ -92,7 +93,8 @@ class _TitleWidget extends StatelessWidget {
 }
 
 class PaddingItems {
-  static const EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets horizontalPadding =
+      EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets verticalPadding = EdgeInsets.symmetric(vertical: 10);
 }
 

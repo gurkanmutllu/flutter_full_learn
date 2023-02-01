@@ -25,7 +25,7 @@ class _PackageLearnViewState extends State<PackageLearnView> with LaunchMixin {
       ),
       body: Column(
         children: [
-          Text('data', style: Theme.of(context).textTheme.subtitle1),
+          Text('data', style: Theme.of(context).textTheme.titleMedium),
           const LoadingBar(size: 80.0),
         ],
       ),
