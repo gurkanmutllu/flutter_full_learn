@@ -35,6 +35,7 @@ In this folder we named files as basic Flutter widgets. Every single file has th
 <br>
 ## 202 folder
 In this folder we worked on caching, state management, introduction to services, theme <br> components and etc. You can find: <br> 
+
 - Alert creating: <br>
 [alert_learn.dart](https://github.com/gurkanmutllu/flutter_full_learn/blob/master/lib/202/alert_learn.dart)
 
